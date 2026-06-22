@@ -809,6 +809,14 @@ local Components = {}; do
 				table.insert(textParts, string.format('<font color="#%s">%s</font>', toolHex, toolName))
 			end
 
+			if Library.GetExtraText then
+				local extraText = SafeCallback(Library.GetExtraText, ESP)
+				if extraText and extraText ~= "" then
+					table.insert(textParts, extraText)
+				end
+			end
+
+
 			BillboardText.Text = table.concat(textParts, "\n")
 			BillboardText.Font = Library.GlobalConfig.Font;
 			BillboardText.TextSize = ESPSettings.TextSize;
