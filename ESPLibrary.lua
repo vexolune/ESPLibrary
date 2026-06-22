@@ -225,6 +225,8 @@ local ReplicatedStorage = cloneref(game:GetService("ReplicatedStorage"))
 local RunService = cloneref(game:GetService("RunService"))
 local UserInputService = cloneref(game:GetService("UserInputService"))
 local CoreGui = cloneref(game:GetService("CoreGui"))
+local Toggles = getgenv().Library.Toggles
+local Options = getgenv().Library.Options
 
 -- // Core Functions // --
 local table_freeze = function<T>(provided_table: T): T
