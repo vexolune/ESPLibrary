@@ -2362,6 +2362,12 @@ getgenv().mstudio45_ESP = Library
 return Library
 end)()
 
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+local Toggles = getgenv().Library.Toggles
+local Options = getgenv().Library.Options
+
 local InstancesLib = ESPLibrary.InstancesLib
 local GuiParent = ESPLibrary.GuiParent
 local RandomString = ESPLibrary.RandomString
